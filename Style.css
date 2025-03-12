@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px 20px;
+}
+
+.nav-left .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-right {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-right li {
+    display: inline;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+.left-text {
+    color: #f4d03f;
+}
+
+.right-text {
+    color: #3498db;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px;
+}
+
+form input, form textarea {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+button {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
