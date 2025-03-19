@@ -1,7 +1,9 @@
 body {
     margin: 0;
+    padding:0;
     font-family: Arial, sans-serif;
     text-align: center;
+    width:100%;
 }
 
 nav {
@@ -219,5 +221,109 @@ button {
 
     .experience-details ul {
         text-align: left;
+    }
+}
+
+/* Overall container for the projects section */
+.projects {
+    width: 100%;  /* Ensure the container takes the full viewport width */
+    text-align: center;
+    box-sizing: border-box;  /* Ensure padding is included in the width calculation */
+    padding:0;
+}
+
+/* Project container with full width */
+.project-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;  /* Ensure the container takes the full width */
+    padding: 40px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 0;  /* Remove margin to ensure full width */
+    box-sizing: border-box;  /* Ensure padding is included in the width */
+}
+
+/* Background color for the first and third projects */
+.project-container:nth-child(odd) {
+    background: black;  /* First and third projects with black background */
+    color: white;  /* White text on black background */
+}
+
+/* Background color for the second project */
+.project-container:nth-child(even) {
+    background: #f4f4f4;  /* Color for the second project (light gray) */
+    color: #333;  /* Normal text color */
+}
+
+/* Project images with left and right padding */
+.project-image {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid #ddd;
+    padding-left: 20px;  /* Add padding on the left of the image */
+    padding-right: 20px;  /* Add padding on the right of the image */
+    background: #fff;
+    transition: transform 0.3s;
+}
+/*
+.project-image:hover {
+    transform: scale(1.1);
+}*/
+
+/* Text container - it should align next to the image */
+.project-details {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;  /* Ensure padding is included in the width */
+}
+
+.project-details h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    color: inherit;  /* Inherit color (white on black, gray on light gray) */
+}
+
+.project-details p {
+    margin: 5px 0;
+    color: inherit;  /* Inherit color */
+    font-size: 18px;
+}
+
+.project-details ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.project-details ul li {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/* Hover animation for projects */
+/*
+.project-container:hover {
+    transform: translateY(-8px);
+}*/
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-image {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .project-details {
+        text-align: center;
     }
 }
