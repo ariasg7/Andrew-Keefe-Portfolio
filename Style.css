@@ -56,8 +56,8 @@ nav {
 }
 
 .profile-image {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid white;
@@ -109,4 +109,115 @@ button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+}
+
+.experience-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    background: #f9f9f9;
+    margin: 40px auto;
+    padding: 40px 60px;
+    width: 90%;
+    max-width: 1200px;
+    border-left: 7px solid #3498db;
+    border-right: 7px solid #3498db;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    gap: 40px;
+    transition: transform 0.3s ease-in-out;
+    grid-template-areas: "logo content empty2";
+}
+
+.experience-container:hover {
+    transform: translateY(-8px);
+}
+
+/* Alternate layout for reverse with symmetric bars */
+.experience-container.reverse {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "empty1 content logo";
+    border-left: 7px solid #f4d03f;
+    border-right: 7px solid #f4d03f;
+}
+
+/* Enlarged and aligned company logos */
+.company-logo {
+    grid-area: logo;
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid #ddd;
+    padding: 12px;
+    background: #fff;
+    transition: transform 0.3s;
+    justify-self: start; /* Align logo to the left */
+}
+
+.company-logo.large {
+    width: 350px;
+}
+
+.company-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Text/Details section */
+.experience-details {
+    grid-area: content;
+    text-align: left;
+    width: 100%;
+}
+
+.experience-details h2 {
+    margin: 0 0 10px;
+    font-size: 30px;
+    color: #333;
+}
+
+.experience-details p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.experience-details ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.experience-details ul li {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .experience-container,
+    .experience-container.reverse {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "logo"
+            "content";
+        text-align: center;
+        padding: 30px;
+        border-left: 7px solid #3498db;
+        border-right: 7px solid #3498db;
+    }
+
+    .company-logo.large {
+        width: 250px;
+        margin-bottom: 20px;
+        justify-self: center; /* Center for mobile */
+    }
+
+    .experience-details {
+        text-align: center;
+    }
+
+    .experience-details ul {
+        text-align: left;
+    }
 }
